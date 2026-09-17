@@ -1,0 +1,26 @@
+[project]
+name = "reasoning"
+version = "0.1.0"
+description = "A reasoning model implementation following Reasoning from Scratch"
+readme = "README.md"
+authors = [
+    { name = "0xpantera", email = "0xpantera@proton.me" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "tokenizers>=0.21.2",
+    "torch>=2.10,<3",
+]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "ruff>=0.4.4",
+]
